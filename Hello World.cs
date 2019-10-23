@@ -7,7 +7,7 @@ namespace HelloWorld
     [KSPAddon(KSPAddon.Startup.MainMenu, false)]
     public class Hello : MonoBehaviour
     {
-        public void Update()
+        public void Start()
         {
             Debug.Log("Hello world! " + Time.realtimeSinceStartup);
         }
@@ -24,7 +24,7 @@ namespace HelloWorld2
         /// <summary>
         /// Called when the part is started by Unity.
         /// </summary>
-        public override void OnStart(StartState state)
+        public override void Update(StartState state)
         {
             // Add stuff to the log
             print("Hello, Kerbin?");
